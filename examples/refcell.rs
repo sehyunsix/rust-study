@@ -13,8 +13,8 @@ fn main() {
         map.insert("marbles", 38);
     }
 
-    // Note that if we had not let the previous borrow of the cache fall out
     // of scope then the subsequent borrow would cause a dynamic thread panic.
+    // Note that if we had not let the previous borrow of the cache fall out
     // This is the major hazard of using `RefCell`.
     let total: i32 = shared_map.borrow().values().sum();
     println!("{total}");

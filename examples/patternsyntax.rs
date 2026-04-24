@@ -32,6 +32,8 @@ fn main () {
     //matches
     let foo = 'f';
     assert!(matches!(foo, 'A'..='Z' | 'a'..='z'));
+
+    //Enum value _로 표시해서 Enum class 만 잡을 수 있음.
     let data = vec![Some(1), None, Some(3), None];
     let count = data.iter()
       .filter(|x| matches!(x, Some(_)))
@@ -39,6 +41,7 @@ fn main () {
 
     println!("{count}");
 
+    //Enum class + 조건 ,값 조건으로 필터링 가능
     let r: Result<i32, &str> = Ok(10);
     if matches!(r, Ok(n) if n >= 10) {
       println!("success and bigger value");

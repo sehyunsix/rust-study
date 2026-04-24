@@ -6,9 +6,9 @@ fn main() {
 
     let x = Some(20);
 
+    // 성공하면 다음 closure 실행
     x.and_then(half_if_even);
 
-    
     let f  = None;
 
     //실패하면 T를 반환 

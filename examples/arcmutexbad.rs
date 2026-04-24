@@ -23,7 +23,7 @@ for _ in 0..N {
         //
         // We unwrap() the return value to assert that we are not expecting
         // threads to ever fail while holding the lock.
-        data +=1;
+        //data +=1 은 작동하지 않음
         // the lock is unlocked here when `data` goes out of scope.
     });
 }
